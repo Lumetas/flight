@@ -2,7 +2,7 @@
   /* Firefox */
   * {
     scrollbar-width: auto;
-    scrollbar-color:grey #00000000;
+    scrollbar-color:var(--scrolbar-1) var(--scrolbar-2);
   }
 
   /* Chrome, Edge, and Safari */
@@ -11,13 +11,13 @@
   }
 
   *::-webkit-scrollbar-track {
-    background:#00000000;
+    background:var(--scrollbar-2);
   }
 
   *::-webkit-scrollbar-thumb {
-    background-color: grey;
+    background-color: var(--scrollbar-1);
     border-radius: 10px;
-    border: 3px solid #00000000;
+    border: 3px solid var(--scrollbar-2);
   }
 
 
@@ -33,6 +33,9 @@ body{
 	--bg-3-color:#FFF;
 	--fg-main-color:#000;
 	--border-radius:0.625rem;
+	--fg-2-color:rgba(0, 0, 0, 0.50);
+	--scrollbar-1:grey;
+	--scrollbar-2:#00000000;
 	font-size:0.1vh;
 	margin:0;
 	
@@ -51,7 +54,7 @@ body[type=text]{
 
 header{
 	width:100vw;
-	border-bottom: 1px solid rgba(0, 0, 0, 0.50);
+	border-bottom: 1px solid var(--fg-2-color);
 	position:relative;
 	top:0rem;
 	left:0rem;
@@ -269,7 +272,7 @@ header span{
 
 .chatelem span{
 	font-size:0.875rem;
-	color:rgba(0, 0, 0, 0.50);
+	color:var(--fg-2-color);
 	font-style: normal;
 	font-family: Quicksand;
 	font-weight: 400;

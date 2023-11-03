@@ -10,6 +10,7 @@
 <body onload='abeme()'>
 <script src='js/class/chatlist.class.js'></script>
 <script src='js/test.js'></script>
+<script src='js/changetheme.js'></script>
 	<header>
 		<div class='generalMessenger'>	
 			<img src="img/airplane.svg" class='airplanelogo' alt='airplane logo'>
