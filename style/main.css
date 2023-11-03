@@ -1,3 +1,26 @@
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color:grey #00000000;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+
+  *::-webkit-scrollbar-track {
+    background:#00000000;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: grey;
+    border-radius: 10px;
+    border: 3px solid #00000000;
+  }
+
+
 html{
 	font-size:2vh;
 }
@@ -100,8 +123,11 @@ header span{
 .chats{
 	position:absolute;
 	width:var(--list-of-chats-width);
-	height:100%;
+	height:calc(100% - 1rem);
+	top:1rem;
 	left:0.5rem;
+	overflow-y:auto;
+	overflow-x:hidden;
 }
 
 .chatWindow{
@@ -118,6 +144,8 @@ header span{
 	height:80vh;
 	border-radius: var(--border-radius);
 	position:relative;
+	overflow-y:auto;
+	overflow-x:hidden;
 }
 
 .inputer{
@@ -161,4 +189,100 @@ header span{
 	border-radius:	var(--border-radius);
 	border:none;
 	background:var(--bg-main-color);
+}
+
+.outermessage{
+	width:70%;
+	padding:0.62rem;
+	position:relative;
+}
+
+.message{
+	display: flex;
+	padding: 0.625rem 1.25rem;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 0.625rem;
+	border-radius:var(--border-radius);
+	background:var(--bg-2-color);
+	width:max-content;
+	max-width:100%;
+}
+
+.message{
+	color: var(--fg-main-color);
+	font-family: Quicksand;
+	font-size: 1.25rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	max-width:95%;
+	width:max-content;
+	word-wrap:break-word;
+	overflow-wrap: anywhere;
+}
+
+.message span{
+	color: var(--fg-main-color);
+
+	font-family: Quicksand;
+	font-size: 0.8125rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+
+}
+
+.outermessageMain{
+	left:28%;
+}
+
+.messageMain{
+	position:absolute;
+	right:0.62rem;
+}
+
+.chatelem{
+	position:relative;
+	left:2.5%;
+	width:95%;
+	height: 4rem;
+	background:var(--bg-2-color);
+	border-radius:var(--border-radius);
+	margin-bottom:0.62rem;
+	--left-text:4.5rem;
+}
+
+.chatelem div{
+	color: var(--fg-main-color);
+	font-family: Quicksand;
+	font-size: 1.25rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	position:absolute;
+	left:var(--left-text);
+	top:20%;
+
+
+}
+
+.chatelem span{
+	font-size:0.875rem;
+	color:rgba(0, 0, 0, 0.50);
+	font-style: normal;
+	font-family: Quicksand;
+	font-weight: 400;
+	line-height: normal;
+	position:absolute;
+	left:var(--left-text);
+	top:50%;
+}
+
+.chatelem img{
+	width:3.5rem;
+	position:absolute;
+	left:0.5rem;
+	top:0.25rem;
+	border-radius:100%;
 }
